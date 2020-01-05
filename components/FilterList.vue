@@ -20,7 +20,6 @@
         if (!currentTag) {
             return false;
         }
-        console.log(currentTag);
         items = items.find(item => item.id == currentTag.id);
         return items.length > 0;
     }
