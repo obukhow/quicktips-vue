@@ -26,9 +26,6 @@ module.exports = {
   */
   build: {
     vendor: ["axios"]
-  },
-  modules: [
-      '~/modules/routes'
-  ]
+  }
 }
 
