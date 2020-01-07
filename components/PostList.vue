@@ -43,7 +43,7 @@
         padding: 0;
         background: #0e1c2f;
         border-radius: 6px;
-        width: 100%;
+        width: calc(100% - 10px);
 
         li {
             border-bottom: 1px solid #061325;

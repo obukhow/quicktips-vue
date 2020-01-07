@@ -75,7 +75,7 @@
         top: 0;
         left: 0;
         overflow-x: hidden;
-        padding: 20px 0 0 20px; /* Place content 60px from the top */
+        padding: 40px 0 0 20px; /* Place content 60px from the top */
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
     }
 
@@ -100,17 +100,43 @@
         right: 0px;
         overflow-y: scroll;
         width: calc(100% - 320px - 240px);
+        background-color: #061325;
     }
     .footer {
         margin-top: 10px;
         font-size: 70%;
     }
 
-    @media screen and (max-height: 450px) {
+    @media screen and (max-width: 1024px) {
         .sidebar {
             padding-top: 15px;
-            //width: 0px;
+            width: 0px;
+            display: none;
         }
+        #main {
+            padding-top: 60px ;
+            margin-left: 10px;
+        }
+        #post {
+            width: calc(100% - 320px);
+        }
+    }
+    @media screen and (max-width: 600px) {
+
+        #main {
+            width: 100%;
+        }
+        #post {
+            width: 100%;
+            display: none;
+        }
+        #post-list {
+            width: calc(100% - 20px);
+        }
+        .post {
+            padding: 20px;
+        }
+
     }
 </style>
 

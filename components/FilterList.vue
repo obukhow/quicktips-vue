@@ -21,7 +21,7 @@
             return false;
         }
         items = items.find(item => item.id == currentTag.id);
-        return items.length > 0;
+        return typeof(items) != "undefined";
     }
     export default {
         props: ['items', 'title', 'className', 'forceShow'],
@@ -30,7 +30,7 @@
         ]),
         data() {
             return {
-                show: this.forceShow || isOpened(this.items, this.currentTaggs)
+                show: this.forceShow || isOpened(this.items, this.$store.state.currentTag)
             }
         }
     }

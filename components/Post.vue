@@ -39,11 +39,20 @@
     .post {
         padding: 20px 20px 20px 40px;
 
-        .text, code {
+        .text {
             margin-top: 30px;
             word-break: break-word;
             word-wrap: break-word;
+            code {
+                margin: 0 0 12px 0;
+                word-break: break-word;
+                word-wrap: break-word;
+            }
+            p {
+                margin: 0 0 12px 0;
+            }
         }
+
     }
 
     code {
