@@ -38,7 +38,7 @@ export const mutations = {
             return;
         }
         state.currentPost = state.posts.find(postL => postL.url == post);
-        state.menuState = 'post';
+        state.menuState = 'postview';
     },
     setMenuState(state, menuState) {
         state.menuState = menuState;

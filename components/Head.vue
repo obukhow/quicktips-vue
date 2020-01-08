@@ -30,7 +30,7 @@
                     this.$store.commit('setMenuState', false);
                     return;
                 }
-                if (this.$store.state.menuState == 'post') {
+                if (this.$store.state.menuState == 'postview') {
                     this.$store.commit('setMenuState', false);
                     this.$store.commit('setCurrentPost', false);
                     return;

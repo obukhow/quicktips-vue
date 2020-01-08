@@ -135,7 +135,7 @@
             width: 100%;
             display: none;
         }
-        #post.post {
+        #post.postview {
             display: block;
             padding-top: 60px;
         }
