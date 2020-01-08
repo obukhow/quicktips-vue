@@ -30,10 +30,19 @@ export const mutations = {
             });
             return result;
         });
+        state.menuState = 'tag';
     },
     setCurrentPost(state, post) {
+        if (post == false) {
+            state.currentPost = false;
+            return;
+        }
         state.currentPost = state.posts.find(postL => postL.url == post);
+        state.menuState = 'post';
     },
+    setMenuState(state, menuState) {
+        state.menuState = menuState;
+    }
 
 }
 export const actions = {

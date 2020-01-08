@@ -1,10 +1,10 @@
 <template>
-    <section>
-        <div class="sidebar">
+    <section class="content">
+        <div class="sidebar" v-bind:class="menuState">
             <FilterList title="Books" v-bind:items="books" class-name="book" v-bind:force-show="true"/>
             <FilterList title="Tags" v-bind:items="tags" class-name="tag" v-bind:force-show="false"/>
         </div>
-        <div id="main">
+        <div id="main" v-bind:class="menuState">
             <div id="post-list">
                 <PostList/>
                 <div class="footer">
@@ -13,7 +13,7 @@
             </div>
 
         </div>
-        <div id="post">
+        <div id="post" v-bind:class="menuState">
             <Post/>
         </div>
     </section>
@@ -31,7 +31,8 @@
             "tags",
             "books",
             "currentTag",
-            "currentPost"
+            "currentPost",
+            "menuState"
         ]),
         async fetch({store, params}) {
             if (params.hasOwnProperty('tagId')) {
@@ -59,12 +60,10 @@
 </script>
 
 <style>
-    .container {
+    .content {
         min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        width: 100%;
+        overflow: hidden;
     }
 
     .sidebar {
@@ -113,22 +112,36 @@
             width: 0px;
             display: none;
         }
+
         #main {
             padding-top: 60px ;
             margin-left: 10px;
         }
+
         #post {
             width: calc(100% - 320px);
         }
     }
     @media screen and (max-width: 600px) {
-
+        .sidebar.menu {
+            padding-top: 60px;
+            display: block;
+            width: 240px;
+        }
         #main {
             width: 100%;
         }
         #post {
             width: 100%;
             display: none;
+        }
+        #post.post {
+            display: block;
+            padding-top: 60px;
+        }
+        #main.menu {
+            padding-top: 60px ;
+            margin-left: 240px;
         }
         #post-list {
             width: calc(100% - 20px);
