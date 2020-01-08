@@ -116,7 +116,7 @@
 
 
     /* HAMBURGER as back button */
-    .hamburger.post {
+    .hamburger.postview {
 
         .bar1 {
             transform: rotate(-40deg);
@@ -134,7 +134,7 @@
             transform-origin: 5%;
             transform: rotate(40deg);
             width: 30px;
-            bottom: 21px;
+            bottom: 10px;
             left: 0px;
         }
     }
