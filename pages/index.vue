@@ -1,9 +1,12 @@
 <template>
     <section class="content">
+
         <div class="sidebar" v-bind:class="menuState">
-            <FilterList title="Books" v-bind:items="books" class-name="book" v-bind:force-show="true"/>
-            <FilterList title="Tags" v-bind:items="tags" class-name="tag" v-bind:force-show="false"/>
+
+                <FilterList title="Books" v-bind:items="books" class-name="book" v-bind:force-show="true"/>
+                <FilterList title="Tags" v-bind:items="tags" class-name="tag" v-bind:force-show="false"/>
         </div>
+
         <div id="main" v-bind:class="menuState">
             <div id="post-list">
                 <PostList/>
