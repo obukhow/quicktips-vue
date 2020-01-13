@@ -1,6 +1,7 @@
 {
 	"name":"quicktips",
 		"routes": [
-		{ "src": "/.*", "dest": "/index.html"}
+		{ "src": "/tags/.*", "dest": "/index.html"},
+		{ "src": "/all/.*", "dest": "/index.html"}
 		]
 }
