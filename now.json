@@ -1,14 +1,13 @@
 {
-	"name":"quicktips",
-	"builds": [
-		{
-			"src": "nuxt.config.js",
-			"use": "@nuxtjs/now-builder",
-			"config": {
-				"serverFiles": [
-					"server-middleware/**"
-				]
-			}
-		}
-	]
+    "name": "quicktips",
+    "routes": [
+        {
+            "src": "/tags/.*",
+            "dest": "/index.html"
+        },
+        {
+            "src": "/all/.*",
+            "dest": "/index.html"
+        }
+    ]
 }
