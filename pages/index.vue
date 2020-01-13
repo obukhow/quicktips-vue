@@ -38,6 +38,7 @@
             "menuState"
         ]),
         async fetch({store, params}) {
+            console.log('fetch');
             if (params.hasOwnProperty('tagId')) {
                 store.commit('setCurrentTag', params.tagId);
             }
