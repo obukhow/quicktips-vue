@@ -45,7 +45,7 @@
                 store.commit('setCurrentPost', params.postId);
             }
         },
-        head () {
+        head() {
             let title = 'obukhow`s quick tips';
             if (this.currentTag) {
                 title = title + ' tag: ' + this.currentTag.name;
@@ -78,7 +78,49 @@
         left: 0;
         overflow-x: hidden;
         padding: 40px 0 0 20px; /* Place content 60px from the top */
-        transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+        transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        20% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        60% {
+            opacity: 0.3;
+        }
+        80% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        20% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 0;
+        }
+        60% {
+            opacity: 0.3;
+        }
+        80% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 
     #main {
@@ -94,6 +136,7 @@
         left: 0px;
         top: 10px;
     }
+
     #post {
         height: 100%;
         position: fixed;
@@ -104,6 +147,7 @@
         width: calc(100% - 320px - 240px);
         background-color: #061325;
     }
+
     .footer {
         margin-top: 10px;
         font-size: 70%;
@@ -114,10 +158,24 @@
             padding-top: 15px;
             width: 0px;
             display: none;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .sidebar.menu {
+            padding-top: 60px;
+            display: block;
+            width: 240px;
+            opacity: 1;
+            visibility: visible;
+            -webkit-animation-name: fadeIn;
+            -webkit-animation-duration: 0.3s;
+            animation-name: fadeIn;
+            animation-duration: 0.5s;
         }
 
         #main {
-            padding-top: 60px ;
+            padding-top: 60px;
             margin-left: 10px;
         }
 
@@ -125,30 +183,33 @@
             width: calc(100% - 320px);
         }
     }
+
     @media screen and (max-width: 600px) {
-        .sidebar.menu {
-            padding-top: 60px;
-            display: block;
-            width: 240px;
-        }
+
         #main {
             width: 100%;
         }
+
         #post {
             width: 100%;
             display: none;
         }
+
         #post.postview {
             display: block;
             padding-top: 60px;
         }
+
         #main.menu {
-            padding-top: 60px ;
+            padding-top: 60px;
             margin-left: 240px;
         }
+
         #post-list {
+            padding-top: 60px;
             width: calc(100% - 20px);
         }
+
         .post {
             padding: 20px;
         }

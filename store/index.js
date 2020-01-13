@@ -30,7 +30,7 @@ export const mutations = {
             });
             return result;
         });
-        state.menuState = 'tag';
+        state.menuState = 'menu';
     },
     setCurrentPost(state, post) {
         if (post == false) {
