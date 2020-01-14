@@ -67,7 +67,7 @@
     .content {
         min-height: 100vh;
         width: 100%;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     .sidebar {
